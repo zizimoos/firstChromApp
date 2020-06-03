@@ -7,11 +7,11 @@ let ToDoArray = [];
 const loadTodos = () => {
   const loadedTodos = localStorage.getItem("todos");
   if (loadedTodos) {
-    console.log(loadedTodos);
+    // console.log(loadedTodos);
     const pasredTodos = JSON.parse(loadedTodos);
-    console.log(pasredTodos);
+    // console.log(pasredTodos);
     pasredTodos.forEach((element) => {
-      console.log(element.todo);
+      // console.log(element.todo);
       paintTodos(element.todo);
     });
   }
@@ -27,13 +27,13 @@ const deleteTodo = (event) => {
   const cleanToDos = ToDoArray.filter(
     (element) => element.id !== Number(li.id)
   );
-  console.log(cleanToDos);
+  // console.log(cleanToDos);
   ToDoArray = cleanToDos;
   saveTodosLocalStorage();
 };
 
 const paintTodos = (todo) => {
-  console.log("painttodo", todo);
+  // console.log("painttodo", todo);
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const doneBtn = document.createElement("button");

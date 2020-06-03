@@ -11,7 +11,7 @@ const paintGreeting = (currentUser) => {
 const handleSubmit = (event) => {
   event.preventDefault();
   const currentValue = input.value;
-  console.log(currentValue);
+  // console.log(currentValue);
 
   paintGreeting(currentValue);
   localStorage.setItem("currentUser", currentValue);
@@ -24,7 +24,7 @@ const askForName = () => {
 
 const loadName = () => {
   const currentUser = localStorage.getItem("currentUser");
-  console.log(currentUser);
+  // console.log(currentUser);
   if (!currentUser) {
     askForName();
   } else {
